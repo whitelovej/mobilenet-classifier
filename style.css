@@ -30,8 +30,8 @@ video {
 }
 
 button {
-  font-size: 96px;
-  padding: 64px 128px;
+  font-size: 96px !important;
+  padding: 64px 128px !important;
   margin-bottom: 20px;
   cursor: pointer;
 }
