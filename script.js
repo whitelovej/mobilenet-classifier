@@ -3,11 +3,11 @@ const webcamElement = document.getElementById('webcam');
 const resultElement = document.getElementById('result');
 const predictButton = document.getElementById('predict-button');
 
-// 🔹 初始化鏡頭（使用前鏡頭）
+// 🔹 初始化鏡頭（使用後鏡頭）
 async function setupCamera() {
   try {
     const stream = await navigator.mediaDevices.getUserMedia({
-      video: { facingMode: 'user' },
+      video: { facingMode: { exact: "environment" } },  // 改成後鏡頭
       audio: false
     });
     webcamElement.srcObject = stream;
