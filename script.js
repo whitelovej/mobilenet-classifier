@@ -24,7 +24,6 @@ async function setupCamera() {
 
 // 🔹 預測物件類別
 async function predict() {
-  alert("test");
   const result = await net.classify(webcamElement);
   if (result.length > 0) {
     resultElement.innerText = `辨識結果：${result[0].className}（信心值：${(result[0].probability * 100).toFixed(2)}%）`;
