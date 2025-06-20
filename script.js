@@ -32,11 +32,11 @@ async function translateLabel(span) {
     const data = await res.json();
     const zh = data[0]?.[0]?.[0] || '翻譯失敗';
 
-    const translationElement = document.createElement('p');
+    const translationElement = document.createElement('h1');
     translationElement.innerText = `翻譯：${zh}`;
-    translationElement.style.fontSize = '18px';
     translationElement.style.marginTop = '10px';
-    translationElement.style.color = '#333';
+    translationElement.style.color = '#4caf50';
+    translationElement.style.fontSize = '24px';
 
     resultElement.appendChild(translationElement);
   } catch (e) {
