@@ -26,9 +26,9 @@ async function setupCamera() {
 async function predict() {
   const result = await net.classify(webcamElement);
   if (result.length > 0) {
-    resultElement.innerText = `辨識結果：${result[0].className}（信心值：${(result[0].probability * 100).toFixed(2)}%）`;
+    resultElement.innerHTML = `<h1>辨識結果：${result[0].className}（信心值：${(result[0].probability * 100).toFixed(2)}%）</h1>`;
   } else {
-    resultElement.innerText = "無法辨識";
+    resultElement.innerHTML = "<h1>無法辨識</h1>";
   }
 }
 
