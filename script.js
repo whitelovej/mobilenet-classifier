@@ -36,7 +36,6 @@ async function translateLabel(span) {
     translationElement.innerText = `翻譯：${zh}`;
     translationElement.style.marginTop = '10px';
     translationElement.style.color = '#4caf50';
-    translationElement.style.fontSize = '24px';
 
     resultElement.appendChild(translationElement);
   } catch (e) {
