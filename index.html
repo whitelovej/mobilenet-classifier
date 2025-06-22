@@ -8,9 +8,16 @@
   <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
 </head>
 <body>
-  <h1>📸 即時物件分類</h1>
-  <video id="webcam" autoplay playsinline width="900" height="900"></video>
-  <button id="predict-button">辨識物件</button>
+  <h1>📸 即時物件分類 + 訓練</h1>
+
+  <video id="webcam" autoplay playsinline width="300" height="300"></video>
+
+  <div style="margin: 10px 0;">
+    <input type="text" id="label-input" placeholder="輸入類別（例如：蘋果）">
+    <button id="capture-button">📷 拍照加入訓練資料</button>
+  </div>
+
+  <button id="predict-button">🔍 辨識物件</button>
   <p id="result">尚未辨識</p>
 
   <script src="script.js"></script>
